@@ -129,4 +129,6 @@ def api_blake2b():
     return jsonify({'result': str(res),
                     'algo':'blake2b'})
 
-app.run()
+
+if __name__ == '__main__':
+    app.run()
