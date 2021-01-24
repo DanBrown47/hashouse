@@ -7,9 +7,7 @@ import hashlib
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-def md5_hash(stuff_in):
-    hash = hashlib.md5(stuff_in.encode()).hexdigest()
-    return hash
+
 
 @app.route('/', methods=['GET'])
 def home():
@@ -17,7 +15,6 @@ def home():
     return """
     <html> HEllo W0rlD <hello> 
     """
-
 @app.route('/help', methods=['GET'])
     # We will come back here later 
 def help():
@@ -28,14 +25,45 @@ def help():
 @app.route('/stdhash/md5/', methods=['GET'])
 def api_md5():
     string_in = request.args.get("query")
-    res = md5_hash(string_in)
-    return jsonify({'result': res})
+    res = hashlib.md5(string_in.encode()).hexdigest()
+    return jsonify({'result': res,
+                    'algo':'md5'})
 
 @app.route('/stdhash/sha256/', methods=['GET'])
-def api_md5():
+def api_sha256():
     string_in = request.args.get("query")
-    res = md5_hash(string_in)
-    return jsonify({'result': res})
+    res = hashlib.md5(string_in.encode()).hexdigest()
+    return jsonify({'result': res,
+                    'algo':'sha256'})
+
+@app.route('/stdhash/sha384/', methods=['GET'])
+def api_sha384():
+    string_in = request.args.get("query")
+    res = hashlib.sha384(string_in.encode()).hexdigest()
+    return jsonify({'result': res,
+                    'algo':'sha384'})
+
+@app.route('/stdhash/sha224/', methods=['GET'])
+def api_sha224():
+    string_in = request.args.get("query")
+    res = hashlib.sha224(string_in.encode()).hexdigest()
+    return jsonify({'result': res,
+                    'algo':'sha224'})
+
+@app.route('/stdhash/sha512/', methods=['GET'])
+def api_sha512():
+    string_in = request.args.get("query")
+    res = hashlib.sha512(string_in.encode()).hexdigest()
+    return jsonify({'result': res,
+                    'algo':'sha512'})
+
+@app.route('/stdhash/sha1/', methods=['GET'])
+def api_sha1():
+    string_in = request.args.get("query")
+    res = hashlib.sha1(string_in.encode()).hexdigest()
+    return jsonify({'result': res,
+                    'algo':'sha1'})
+
 
 
 
