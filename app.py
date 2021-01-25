@@ -1,5 +1,5 @@
 import flask
-from flask import request,jsonify
+from flask import render_template, request,jsonify
 import urllib.request
 import json
 import hashlib
@@ -11,10 +11,7 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET' , 'POST'])
 def home():
-    # We will come back here later 
-    return """
-    <html> HEllo W0rlD <hello> 
-    """
+    return render_template("home.html")
 
 
 @app.route('/hash/md5/', methods=['GET' , 'POST'])
