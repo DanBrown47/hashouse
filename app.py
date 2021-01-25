@@ -3,6 +3,7 @@ from flask import render_template, request,jsonify
 import urllib.request
 import json
 import hashlib
+import base64
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -121,6 +122,26 @@ def api_blake2b():
     return jsonify({'result': str(res),
                     'algo':'blake2b'})
 
+##########  Hash  ###########
+#########   Encoding #######
+
+@app.route('/base64/encode/', methods=['GET' , 'POST'])
+def base64_encode():
+    string_in = request.args.get("query")
+    string_bytes = string_in.encode('ascii')
+    base64_bytes = base64.b64encode(string_bytes)
+    res  = base64_bytes.decode('ascii')
+    return jsonify({'result': str(res),
+                    'algo':'base64_encoding'})
+
+@app.route('/base64/decode/', methods=['GET' , 'POST'])
+def base64_decode():
+    base64_in = request.args.get("query")
+    base64_bytes = base64_in.encode('ascii')
+    message_bytes = base64.b64decode(base64_bytes)
+    res  = message_bytes.decode('ascii')
+    return jsonify({'result': str(res),
+                    'algo':'base64_decode'})
 
 if __name__ == '__main__':
     app.run()

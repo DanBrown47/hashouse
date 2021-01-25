@@ -3,11 +3,126 @@
 
 <head>
     <meta charset="utf-8">
+    <meta author="DanBrown47">
+    <!-- <meta http-equiv="refresh" content="5" /> -->
     <title>Hashouse</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Test Case</h1>
+    <br>
+    <h4 align="center"> API | Hashouse </h4>
+    <br>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Request | Hash functions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Hash_md5</td>
+                    <td>https://hashouse.herokuapp.com/hash/md5?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Hash_Sha</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha256?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Hash_Sha</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha384?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Hash_Sha</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha224?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Hash_Sha</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha512?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Hash_Sha</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha1?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Hash_Sha3</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha3_224?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>Hash_Sha3</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha3_256?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>Hash_Sha3</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha3_384?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>Hash_Sha3</td>
+                    <td>https://hashouse.herokuapp.com/hash/sha3_512?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>Hash_Shake</td>
+                    <td>https://hashouse.herokuapp.com/hash/shake_256?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">11</th>
+                    <td>Hash_Shake</td>
+                    <td>https://hashouse.herokuapp.com/hash/shake_128?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td>Hash_blake</td>
+                    <td>https://hashouse.herokuapp.com/hash/blake2b?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">13</th>
+                    <td>Hash_blake</td>
+                    <td>https://hashouse.herokuapp.com/hash/blake2s?query=something</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Request | Base64</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Base64_encode</td>
+                    <td>/base64/encode/?query=something</td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Base64_decode</td>
+                    <td>/base64/decode/?query=Z3sdlfZGZZr==</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
