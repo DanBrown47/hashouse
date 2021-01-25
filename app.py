@@ -109,7 +109,7 @@ def api_shake_128():
     string_in = request.args.get("query")
     size = int(request.args.get("size"))
     res = hashlib.shake_128(string_in.encode()).digest(size)
-    return jsonify({'result': res,
+    return jsonify({'result': str(res),
                     'algo':'shake_128',
                     'size':size})
 
