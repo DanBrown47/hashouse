@@ -15,11 +15,6 @@ def home():
     return """
     <html> HEllo W0rlD <hello> 
     """
-@app.route('/help', methods=['GET' , 'POST'])
-    # We will come back here later 
-def help():
-    return jsonify({'All commands':'commands'})
-
 
 
 @app.route('/hash/md5/', methods=['GET' , 'POST'])
