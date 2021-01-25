@@ -119,7 +119,7 @@ def api_shake_128():
 def api_blake2s():
     string_in = request.args.get("query")
     res = hashlib.blake2s(string_in.encode()).hexdigest()
-    return jsonify({'result': res,
+    return jsonify({'result': str(res),
                     'algo':'blake2s'})
 
 @app.route('/hash/blake2b/', methods=['GET' , 'POST'])
