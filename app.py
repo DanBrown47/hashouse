@@ -27,7 +27,7 @@ def api_md5():
 @app.route('/hash/sha256/', methods=['GET' , 'POST'])
 def api_sha256():
     string_in = request.args.get("query")
-    res = hashlib.md5(string_in.encode()).hexdigest()
+    res = hashlib.sha256(string_in.encode()).hexdigest()
     return jsonify({'result': res,
                     'algo':'sha256'})
 
